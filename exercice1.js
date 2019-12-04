@@ -50,14 +50,14 @@ btn5.addEventListener("click", function () {
 
     }
     else{
-        //alert('votre 5 éme element est ' + entreNr5.innerHTML.toUpperCase() );
+        alert('votre 4 éme element est ' + entreNr5.innerHTML.toUpperCase() );
     }
 
 });
 
 btn3.addEventListener("click", function () {
    entreNr5.innerHTML = tab[2];
-    //alert('votre 5 éme element est ' + entreNr5.innerHTML.toUpperCase() )
+   alert('votre 5 éme element est ' + entreNr5.innerHTML.toUpperCase() )
 
 });
 
@@ -99,7 +99,11 @@ btnDel.addEventListener('click',function () {
  */
 
 btnDelAll.addEventListener('click',function () {
-    tab.splice(txt.value);
-    tabField.innerHTML = tab;
-    //console.log(tabField)
+    for (var i = 0; i < tab.length; i++){
+        tab.splice(txt.value);
+        tab = [];
+        tabField.innerHTML = tab;
+            console.log(tabField)
+        }
+
 });
